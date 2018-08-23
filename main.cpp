@@ -28,6 +28,7 @@ bool sair(Carro &carro){
     }
 
 }
+
 void abastecer(Carro &carro, float gasolina){
     if( gasolina >= carro.tanqueMax ){
         carro.tanque = 10;
@@ -43,7 +44,7 @@ void abastecer(Carro &carro, float gasolina){
 
 void dirigir(Carro &carro, float andar){
     if(carro.pessoas == 0){
-        cout << "fail: nao ha ninguem no carro" << endl;
+        cout << "fail: nao tem ninguem no carro" << endl;
     }else if(andar > ( carro.tanque*10 )){
         cout << "fail: gasolina insuficiente" << endl;
     }else{
@@ -69,7 +70,7 @@ int main (){
                 }
             }else if( op == "out" ){
                 if( sair(carro) == false ){
-                    cout << "fail: nao ha ninguem no carro" << endl;
+                    cout << "fail: nao tem ninguem no carro" << endl;
                 }else{
                     cout << "done" << endl;
             }else if( op == "fuel" ){
