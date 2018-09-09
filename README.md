@@ -23,3 +23,15 @@
 - Continuo tendo dificuldade em entender o que o problema precisa pra passar pro codigo em si.
 - Quanto tempo levou pra fazer a atividade? 
 - umas 5 horas, não continuas.
+
+# Contato
+- O que você fez?
+- Tentei fazer o contato completo, mas fiz com um programa com funções de adicionar, remover, mostrar os contatos.
+- Com quem você fez e como fez?
+- Fiz assistindo os videos do seu canal no youtube e olhando codigos das atividades passadas para pegar como exemplo, tentei fazer sozinho, mas sempre com ajudinhas de amigos.
+- O que aprendeu e saber fazer?
+- Estou aprendendo a usar Controller (não usei nesse porque ainda estou praticando) e melhorando o conhecimento em strings.
+- O que tem dificuldade ainda?
+- Já estou melhorando em compreender o que o programa quer, mas ainda estou com dificuldades em começar o codigo do zero sem nenhum exemplo do lado pra fazer .
+- Quanto tempo levou pra fazer a atividade?
+- umas 5 horas.
