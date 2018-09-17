@@ -34,3 +34,15 @@
 - Já estou melhorando em compreender o que o programa quer, mas ainda estou com dificuldades em começar o codigo do zero sem nenhum exemplo do lado pra fazer.
 
 - umas 5 horas.
+
+# Tamagotchi
+
+- Fiz o programa pedido, com as funções de iniciar, jogar, comer, dormir e morrer, limpar.
+
+- Fiz novamente assistindo os video do seu canal e olhando os codigos das atividades passada pra pegar como exemplos, como a setar valores, entre outros, e tambem contei com a ajuda de pessoas que moram comigo.
+
+- Estou aprendendo a usar a funcionalidade Getters, Setters, Class com Private e Public.
+
+- Estou com dificuldades nas funcionalidades que estou aprendendo e tambem ainda não consigo fazer um codigo do zero sem ajuda ou sem olhar outros codigos para tirar como exemplo.
+
+- total de 6 horas.
