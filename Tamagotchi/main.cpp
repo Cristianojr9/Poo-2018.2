@@ -155,16 +155,12 @@ public:
             out << pet.toString();
         }else if(op == "play"){
             pet.jogar();
-            out << "sucess" << endl;
         }else if(op == "eat"){
             pet.comer();
-            out << "sucess" << endl;
         }else if(op == "sleep"){
             pet.dormir();
-            out << "sucess" << endl;
         }else if(op == "clean"){
             pet.limpar();
-            out << "sucess" << endl;
         }return out.str();
     }
 
