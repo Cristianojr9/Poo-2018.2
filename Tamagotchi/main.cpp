@@ -73,18 +73,18 @@ public:
     bool morreu(){
         if(getEnergy() <= 0){
             setEnergy(0);
-            cout << "fail: pet morreu de fraqueza";
+            cout << "fail: pet morreu de fraqueza\n";
             vivo = false;
             return true;
         }else if(getHungry() <= 0){
             setHungry(0);
             vivo = false;
-            cout << "fail: pet morreu de fome";
+            cout << "fail: pet morreu de fome\n";
             return true;
         }else if(getClean() <= 0){
             setClean(0);
             vivo = false;
-            cout << "fail: pet morreu de sujeira";
+            cout << "fail: pet morreu de sujeira\n";
             return true;
         }
         return false;
@@ -92,7 +92,7 @@ public:
 
     void jogar(){
         if(vivo = false){
-            cout << "fail: pet esta morto";
+            cout << "fail: pet esta morto\n";
             return;
         }else{
             setEnergy(getEnergy() - 2);
@@ -105,7 +105,7 @@ public:
 }
     void comer(){
         if(vivo = false){
-            cout << "fail: pet esta morto";
+            cout << "fail: pet esta morto\n";
             return;
         }else{
             setEnergy(getEnergy() - 1);
@@ -117,7 +117,7 @@ public:
 
     void dormir(){
         if(vivo = false){
-            cout << "fail: pet esta morto";
+            cout << "fail: pet esta morto\n";
             return;
         }else{
             setHungry(getHungry() - 1);
@@ -127,7 +127,7 @@ public:
 }
     void limpar(){
         if(vivo = false){
-            cout << "fail: pet esta morto";
+            cout << "fail: pet esta morto\n";
             return;
         }else{
             setHungry(getHungry() - 1);
