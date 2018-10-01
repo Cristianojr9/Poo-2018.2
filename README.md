@@ -46,3 +46,15 @@
 - Estou com dificuldades nas funcionalidades que estou aprendendo e tambem ainda não consigo fazer um codigo do zero sem ajuda ou sem olhar outros codigos para tirar como exemplo.
 
 - total de 6 horas.
+
+# Conta
+
+- Fiz um programa com as funções pedidas e interativo.
+
+- Fiz com a ajuda das pessoas que moram comigo e usando como referência códigos dos outros trabalhos, vídeo do canal do Professor.
+
+- Estou melhorando o conhecimento em Getters e Setters e conhecendo melhor a linguagem C++. 
+
+- Estou com dificuldades ainda nas criação das funções e começar o código do zero, mas estou tendo uma constante evolução quanto a isso. 
+
+- cerca de 6 horas.
