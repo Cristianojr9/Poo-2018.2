@@ -58,3 +58,15 @@
 - Estou com dificuldades ainda nas criação das funções e começar o código do zero, mas estou tendo uma constante evolução quanto a isso. 
 
 - cerca de 6 horas.
+
+# Anotações
+
+- Fiz o programa, mas imcompleto (sem apagar uma nota dado o título), mas com todas as outras funções.
+
+- Fiz sozinho, com o vídeo da aula auxiliando e pesquisas na internet e olhando códigos das atividades anteriores. 
+
+- Estou aprendendo o conceito de Mapa, ponteiros e sobre as funções.
+
+- Estou com dificuldades no conceito de Mapa(estou estudando) e criação dos códigos do zero, manipular ponteiros tambem.
+
+- cerca de 10 horas.
