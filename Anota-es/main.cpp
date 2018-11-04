@@ -3,9 +3,7 @@
 #include <map>
 #include <vector>
 #include <string>
-
 using namespace std;
-
 class Nota{
     string titulo, texto;
 public:
@@ -13,7 +11,6 @@ public:
         this->titulo = titulo;
         this->texto = texto;
     }
-
     string toString(){
         return "[" + titulo + ";" + texto + "]";
     }
