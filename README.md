@@ -59,6 +59,16 @@
 
 - cerca de 6 horas.
 
+# Agiota
+
+-
+
+-
+
+-
+
+-
+
 # Anotações
 
 - Fiz o programa, mas imcompleto (sem apagar uma nota dado o título), mas com todas as outras funções.
