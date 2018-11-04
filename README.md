@@ -63,13 +63,15 @@
 
 # Agiota
 
--
+- Fiz o programa quase por completo, sem funções como matar, mas com algumas já funcionais. 
 
--
+- Fiz sozinho, com a ajuda dos videos da aula, códigos anteriores, pesquisas na internet. 
 
--
+- Estou aprendendo a criar melhor as funções, uso de construtores e me adaptando melhor com a linguagem. 
 
--
+- Minha dificuldade é saber o que o programa pede, mas com a ajuda de das aulas e das dicas do professor consigo entender e começar o código, mas com dificuldade começar sem olhar outros códigos de atividades anteriores.
+
+- cerca de 10 horas.
 
 # Anotações
 
