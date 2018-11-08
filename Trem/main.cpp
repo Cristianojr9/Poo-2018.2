@@ -10,7 +10,7 @@ public:
     virtual string getId() = 0;
     virtual string toString() = 0;
     virtual ~Emb(){
-    };
+    }
 };
 
 class Pass: public Emb {
@@ -60,10 +60,28 @@ public:
     virtual string toString() = 0;
 };
 
-/* class VagaoCarga : public Vagao {
+class VagaoCarga : public Vagao {
     float capacidade;
     map<string, Carga*> elementos;
-}; */
+public:
+    VagaoCarga(float capacidade){
+        this->capacidade = capacidade;
+    }
+    virtual ~VagaoCarga(){
+        for(auto & limp : carga)
+            delete limp.second;
+    }
+    /*virtual bool embarcar(Emb * emb){
+    }
+    virtual bool exists(string idCarga){
+    }
+    virtual bool desembarcar(string idCarga){
+    }
+    virtual string toString(){
+    } */
+    
+
+};
 
 class VagaoPessoas : public Vagao {
     vector<Pass*> passageiros;
@@ -145,6 +163,7 @@ public:
                 return true;
         return false;
     }
+    // bool exists(string id){}
     string toString(){
         stringstream ss;
         ss << "Trem: ";
