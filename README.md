@@ -67,20 +67,40 @@
 
 - Fiz sozinho, com a ajuda dos videos da aula, códigos anteriores, pesquisas na internet. 
 
-- Estou aprendendo a criar melhor as funções, uso de construtores e me adaptando melhor com a linguagem. 
+- Estou aprendendo a criar melhor as funções, uso de construtores e ponteiros.
 
 - Minha dificuldade é saber o que o programa pede, mas com a ajuda de das aulas e das dicas do professor consigo entender e começar o código, mas com dificuldade começar sem olhar outros códigos de atividades anteriores.
 
 - cerca de 10 horas.
 
+# Repositorio
+
+-(em andamento)
+
+-
+-
+-
+-
+-
+
 # Anotações
 
 - Fiz o programa, mas imcompleto (sem apagar uma nota dado o título), mas com todas as outras funções.
 
-- Fiz sozinho, com o vídeo da aula auxiliando e pesquisas na internet e olhando códigos das atividades anteriores. 
+- Fiz sozinho, com o vídeo da aula auxiliando e pesquisas na internet (conceito de mapas e afins) e olhando códigos das atividades anteriores. 
 
 - Estou aprendendo o conceito de Mapa, ponteiros e sobre as funções.
 
 - Estou com dificuldades no conceito de Mapa(estou estudando) e criação dos códigos do zero, manipular ponteiros tambem.
 
 - cerca de 10 horas.
+
+# Trem
+
+- (em andamento)
+
+-
+-
+-
+-
+-
