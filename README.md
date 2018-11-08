@@ -99,8 +99,12 @@
 
 - (em andamento)
 
--
--
--
--
--
+- Fiz quase todas as implementações que faltava do código do professor, desembarque, destrutores. Faltou outras implementações, como, função bool de existir(em andamento), classe vargaoCarga (em andamento). 
+
+- Fiz pesquisando na internet sobre as metodologias virtuais, funcionamente de heranças e assistindo o vídeo do professor.  
+
+- Estou aprendendo sobre heranças, funcionamento de destrutores, um pouco mais sobre mapas. E aprendi conceitos como auto, find, end, sobre o c++ em questão. 
+
+- As dificuldades são em fazer o código do zero, ponteiros ainda buga a mente, um pouco sobre mapas (mas em constante evolução) e os métodos virtuais. 
+
+- cerca de 6 horas. 
