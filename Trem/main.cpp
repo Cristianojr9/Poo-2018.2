@@ -17,7 +17,8 @@ class Pass: public Emb {
     string id;
 public:
     Pass(string id = ""):
-        id(id){}
+        id(id)
+    {}
     virtual ~Pass(){
     }
     virtual string getId(){
@@ -28,15 +29,33 @@ public:
     }
 };
 
-/* class Carga: public Emb {
-    getPeso();
-}; */
-
+class Carga: public Emb {
+    string id;
+    float peso;
+public:
+    Carga(string id = "fulano", float peso}{
+        this->id = id;
+        this->peso = peso;
+    }
+    virtual ~Carga(){
+    }
+    virtual float getId(){
+        return id;
+    }
+    virtual float getPeso(){
+        return peso;
+    }
+    virtual string toString(){
+        stringstream ss;
+        ss << id + ":" << peso;
+        return ss.str();
+    }
+};
 class Vagao{ //contratos
 public:
     virtual bool embarcar(Emb * emb) = 0;
     virtual ~Vagao(){};
-    //virtual bool desembar(string idPass) = 0;
+    virtual bool desembarcar(string idPass) = 0;
     //virtual bool exists(string idPass) = 0;
     virtual string toString() = 0;
 };
@@ -69,8 +88,16 @@ public:
         }
         return false;
     }
-    /* virtual bool desembar(string idPass) = 0;
-    virtual bool exists(string idPass) = 0; */
+    virtual bool desembarcar(string idPass){
+        for(auto *& pass : passageiros)
+            if(pass == nullptr && pass->getId() != idPass){
+                pass != nullptr;
+                delete pass;
+                return true;
+            }
+        return false;
+    }
+    // virtual bool exists(string idPass) = 0; */
 
     virtual string toString(){
         stringstream ss;
@@ -112,7 +139,12 @@ public:
         }
         return false;
     }
-//    desembar(idPass);
+    bool desembarcar(string idPass){
+        for(auto * vagao : vagoes)
+            if(vagao->desembarcar(idPass))
+                return true;
+        return false;
+    }
     string toString(){
         stringstream ss;
         ss << "Trem: ";
@@ -150,7 +182,13 @@ public:
                 delete pass;
         }else if(op == "show"){
             cout << trem.toString() << endl;
-        }else
+        }else if(op == "out"){
+            string idPass = read<string>(in);
+            if(!trem.desembarcar(idPass))
+                throw "fail: essa pessoa nao esta no trem";
+            out << "sucess\n";
+        }//else if(){}
+        else
             cout << "fail: comando invalido" << endl;
     }
 
