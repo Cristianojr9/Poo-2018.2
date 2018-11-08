@@ -1,6 +1,6 @@
 ![Minha imagem](https://scontent.ffor1-1.fna.fbcdn.net/v/t1.0-9/33398243_1509486335827077_7547651479297851392_n.jpg?_nc_cat=106&_nc_ht=scontent.ffor1-1.fna&oh=a4e4b121e4588caeeb1db75e59538b51&oe=5C7B3B4E)
 
-# Carro
+# Atividade 01 - Carro
 
 - Fiz um programa básico, porém muito interativo, com várias funcionalidades. Por exemplo, andar, embarcar pessoas, desembarcar pessoas, abastecer.
 
@@ -12,7 +12,7 @@
 
 - Umas 4 hrs, separada por partes. 
 
-# Topic
+# Atividade 02 - Topic
 
 
 - Fiz um programa com todas as funcionalidades pedidas. Por exemplo, embarcar, criar uma topic com cadeiras preferenciais, saída de passageiros(mais ou menos, não consegui resolver o erro de Segmentation fault). 
@@ -25,7 +25,7 @@
 
 - umas 5 horas, não continuas.
 
-# Contato
+# Atividade 03 - Contato
 
 - Tentei fazer o contato completo, mas fiz com um programa com funções de adicionar, remover, mostrar os contatos.
 
@@ -37,7 +37,7 @@
 
 - umas 5 horas.
 
-# Tamagotchi
+# Atividade 04 - Tamagotchi
 
 - Fiz o programa pedido, com as funções de iniciar, jogar, comer, dormir e morrer, limpar.
 
@@ -49,7 +49,7 @@
 
 - total de 6 horas.
 
-# Conta
+# Atividade - Conta (Extra)
 
 - Fiz um programa com as funções pedidas e interativo.
 
@@ -61,7 +61,7 @@
 
 - cerca de 6 horas.
 
-# Agiota
+# Atividade 05 - Agiota
 
 - Fiz o programa quase por completo, sem funções como matar, mas com algumas já funcionais. 
 
@@ -73,7 +73,7 @@
 
 - cerca de 10 horas.
 
-# Repositorio
+# Atividade 06 - Repositorio I
 
 - (em andamento)
 
@@ -83,7 +83,7 @@
 -
 -
 
-# Anotações
+# Atividade 08 - Anotações
 
 - Fiz o programa, mas imcompleto (sem apagar uma nota dado o título), mas com todas as outras funções.
 
@@ -95,7 +95,7 @@
 
 - cerca de 10 horas.
 
-# Trem
+# Atividade 10 - Trem
 
 - (em andamento)
 
