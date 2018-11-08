@@ -107,4 +107,4 @@
 
 - As dificuldades são em fazer o código do zero, ponteiros ainda buga a mente, um pouco sobre mapas (mas em constante evolução) e os métodos virtuais. 
 
-- cerca de 6 horas. 
+- cerca de 6 horas e contando... 
