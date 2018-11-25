@@ -11,12 +11,6 @@ struct Fone{
 		this->label = label;
 		this->numero = numero;
 	}
-
-	/*bool Val(string fone){
-		string validar = "0123456789().";
-		for(int i = 0; i < )
-	}*/
-
 	string toString(){
 		stringstream ss; 
 		ss << this->label << ":" << this->numero;
