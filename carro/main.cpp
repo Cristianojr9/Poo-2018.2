@@ -71,7 +71,7 @@ int main (){
             }else if( op == "out" ){
                 if( sair(carro) == false ){
                     cout << "fail: nao tem ninguem no carro" << endl;
-                }else{
+                }else
                     cout << "done" << endl;
             }else if( op == "fuel" ){
                 cin >> gas;
