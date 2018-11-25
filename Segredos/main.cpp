@@ -1,124 +1,84 @@
 #include <iostream>
-#include <vector>
-#include <sstream>
-
 using namespace std;
 
-class Segredo{
-    int nivel;
-    string texto;
-public:
-    Segredo(int nivel = 0, string texto = ""){
-        this->nivel = nivel;
-        this->texto = texto;
-    }
-    void setNivel(int valor){
-        if(valor < 0 || valor > 10)
-            throw "fail: nivel invalido";
-        this->nivel = valor;
-    }
-    
-    string toString(){
-        return "[" + texto + "] " + to_string(nivel); 
-    }
+struct Carro{
+    float tanque;
+    float tanqueMax;
+    int pessoas;
+    int passMax;
+    float distancia;
+
 };
 
-struct User{
-    string id;
-    string pass;
-    Segredo seg;
-    User(string id = "", string pass = ""){
-        this->id = id;
-        this->pass = pass;
+bool entrar(Carro &carro){
+    if( carro.pessoas == carro.passMax ){
+        return false;
+    }else{
+        carro.pessoas = carro.pessoas + 1;
+        return true;
     }
-    string getId(){
-        return id;
-    }
-    string getPass(){
-        return pass;
-    }
-    string toString(){
-        return id + seg.toString();
-    }
-    bool verificar(string pass){
-        return this->pass == pass;
-    }
-};
+}
 
-struct Sistema{
-    vector<User> usuarios;
-    string adminName;
-    Sistema(){
-        adminName = "admin";
-        usuarios.push_back(User("admin", "admin"));
+bool sair(Carro &carro){
+    if( carro.pessoas == 0 ){
+        return false;
+    }else{
+        carro.pessoas = carro.pessoas - 1;
+        return true;
     }
-    // saber se existe usuarios
-    User& getUser(string user){
-        for(auto &user : usuarios)
-            if(user.getId() == user.id)
-                return user;
-        throw "fail: usuario não existe";
-    // add usuarios
-    }
-    void addUser(User user){
-        for(auto &usu : usuarios)
-            if(user.getId() == usu.getId())
-                throw "fail: usuario ja existe";
-        usuarios.push_back(user);
-    }
-    
-};
 
-struct Controller{
-    Sistema sist;
-    User * current;
-public:   
-    Controller(){
-        current = nullptr;
-    }
-    void shell(string line){
-        stringstream in(line);
-        string op;
-        in >> op;
-        if(op == "addUser"){
-            string nome, pass;
-            in >> nome >> pass;
-            sist.addUser(User(nome, pass));
-            cout << "sucess\n";
-        }else if(op == "login"){
-            string nome, pass;
-            in >> nome, pass;
-            if(current != nullptr)
-                throw "fail: ja existe alguem logado";
-            User& user = sist.getUser(nome); 
-            if(!user.verificar(pass))
-                throw "fail: senha invalida";
-            current = &user;
-        }else if(op == "logout"){
-            if(current == nullptr)
-                throw "fail: ninguem logado";
-            current = nullptr;
-        }else if(op == "show"){
-            cout << current->toString() << endl;
+}
+
+void abastecer(Carro &carro, float gasolina){
+    if( gasolina >= carro.tanqueMax ){
+        carro.tanque = 10;
+        cout << "done" << endl;
+    }else if( gasolina > 0 && gasolina < carro.tanqueMax ){
+            carro.tanque = gasolina + carro.tanque;
+            if( carro.tanque > carro.tanqueMax ){
+            carro.tanque = 10;
         }
-    }   
-    void exec(){
-        string ss;
-        while(true){
-            getline(cin, ss);
-            if(ss == "end")
-                break;
-            try{
-                shell(ss);
-            }catch(const char * e){
-                cout << e << endl;
+        cout << "done" << endl;
+    }
+}
+
+void dirigir(Carro &carro, float andar){
+    if(carro.pessoas == 0){
+        cout << "fail: nao tem ninguem no carro" << endl;
+    }else if(andar > ( carro.tanque*10 )){
+        cout << "fail: gasolina insuficiente" << endl;
+    }else{
+        carro.tanque = carro.tanque - ( andar / 10 );
+        carro.distancia = carro.distancia + andar;
+        cout << "done" << endl;
+    }
+}
+
+int main (){
+    Carro carro = {0, 10, 0, 2, 0};
+    string op;
+    float gas = 0,km = 0;
+    while(true){
+        cin >> op;
+   	    if(op == "show"){
+                cout << "pass: " << carro.pessoas << ", gas: "<< carro.tanque << ", km: " << carro.distancia << endl;
+            }if( op == "in" ){
+                if(entrar(carro) == false){
+                    cout << "fail: limite de pessoas atingido" << endl;
+                }else{
+                    cout << "done" << endl;
+                }
+            }else if( op == "out" ){
+                if( sair(carro) == false ){
+                    cout << "fail: nao tem ninguem no carro" << endl;
+                }else
+                    cout << "done" << endl;
+            }else if( op == "fuel" ){
+                cin >> gas;
+                abastecer(carro,gas);
+            }else if( op == "drive" ){
+                cin >> km;
+                dirigir(carro,km);
             }
-        }
     }
-};
-
-int main(){
-    Controller c;
-    c.exec();
-    return 0;
 }
