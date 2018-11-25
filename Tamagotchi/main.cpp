@@ -64,9 +64,9 @@ public:
     string toString(){
         stringstream ss;
         ss << "E:" << getEnergy() << "/" << getEnergyMax() << ", "
-             << "H:" << getHungry() << "/" << getHungryMax() << ", "
-             << "C:" << getClean() << "/" << getCleanMax() << ", "
-             << "D:" << getDiamonds() << ", " << "A:" << getAge() << endl;
+        ss << "H:" << getHungry() << "/" << getHungryMax() << ", "
+        ss << "C:" << getClean() << "/" << getCleanMax() << ", "
+        ss << "D:" << getDiamonds() << ", " << "A:" << getAge() << endl;
         return ss.str();
     }
 
