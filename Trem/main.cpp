@@ -56,7 +56,7 @@ public:
     virtual bool embarcar(Emb * emb) = 0;
     virtual ~Vagao(){};
     virtual bool desembarcar(string idPass) = 0;
-    //virtual bool exists(string idPass) = 0;
+    virtual bool exists(string idPass) = 0;
     virtual string toString() = 0;
 };
 
@@ -71,16 +71,44 @@ public:
         for(auto & limp : carga)
             delete limp.second;
     }
-    /*virtual bool embarcar(Emb * emb){
+    virtual bool embarcar(Emb * emb){
+        if(Pass * pass = dynamic_cast<Pass*>(emb)){
+            for(size_t i = 0; i < passageiros.size(); i++)
+                if(passageiros[i] == nullptr){
+                    passageiros[i] = pass;
+                    return true;
+                }
+        }
+        return false;
     }
-    virtual bool exists(string idCarga){
+    virtual bool desembarcar(string idPass){
+        for(auto *& pass : passageiros)
+            if(pass != nullptr && pass->getId() == idPass){
+                pass = nullptr;
+                delete pass;
+                return true;
+            }
+        return false;
     }
-    virtual bool desembarcar(string idCarga){
-    }
-    virtual string toString(){
-    } */
-    
 
+    virtual bool exists(string idPass){
+        for(size_t i = 0; i <= passageiros.size(); i++)
+            if(passageiros[i]->getId() == idPass)
+                return true;
+        return false;
+    }
+
+    virtual string toString(){
+        stringstream ss;
+        ss << "[ ";
+        for(auto* pass : passageiros){
+            if(pass == nullptr) ss << "- ";
+            else 
+                ss << pass->toString() << " ";
+        }
+        ss << "]";
+        return ss.str();
+    }
 };
 
 class VagaoPessoas : public Vagao {
@@ -115,7 +143,12 @@ public:
             }
         return false;
     }
-    // virtual bool exists(string idPass) = 0; */
+    
+    virtual bool exists(string idCarga){
+        if(cargas.find(idCarga) != cargas.end())
+            return true; 
+        return false;
+    }
 
     virtual string toString(){
         stringstream ss;
@@ -163,7 +196,12 @@ public:
                 return true;
         return false;
     }
-    // bool exists(string id){}
+    bool exists(string id){
+        for(auto * vagao : vagoes)
+            if(vagao->exists(id))
+                return true;
+        return false;
+    }
     string toString(){
         stringstream ss;
         ss << "Trem: ";
@@ -206,7 +244,7 @@ public:
             if(!trem.desembarcar(idPass))
                 throw "fail: essa pessoa nao esta no trem";
             out << "sucess\n";
-        }//else if(){}
+        }
         else
             cout << "fail: comando invalido" << endl;
     }
