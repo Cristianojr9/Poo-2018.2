@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
- using namespace std;
- class Segredo{
+using namespace std;
+class Segredo{
     int nivel;
     string texto;
 public:
