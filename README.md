@@ -97,9 +97,7 @@
 
 # Atividade 10 - Trem
 
-- (em andamento)
-
-- Fiz quase todas as implementações que faltava do código do professor, desembarque, destrutores. Faltou outras implementações, como, função bool de existir(em andamento), classe vargaoCarga (em andamento). 
+- Fiz quase todas as implementações que faltava do código do professor, desembarque, destrutores, função bool de existir, classe vargaoCarga. 
 
 - Fiz pesquisando na internet sobre as metodologias virtuais, funcionamente de heranças e assistindo o vídeo do professor.  
 
@@ -107,6 +105,6 @@
 
 - As dificuldades são em fazer o código do zero, ponteiros ainda buga a mente, um pouco sobre mapas (mas em constante evolução) e os métodos virtuais. 
 
-- cerca de 6 horas e contando... 
+- cerca de 12 horas 
 
 # Atividade 13 - Twitter
