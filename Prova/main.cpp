@@ -142,12 +142,7 @@ public:
         vector<Contato> resp;
         for(auto& par : favoritos)
             resp.push_back(*par.second);
-        /*
-         for(auto cont : getContatos()){
-             if(cont.getFav()){
-                 resp.push_back(cont);
-             }
-        */
+    }
         return resp;
     }
 
