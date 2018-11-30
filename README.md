@@ -77,11 +77,15 @@
 
 - (em andamento)
 
--
--
--
--
--
+- Fiz o resto das funcionalidades que faltava do código, mas ta dando erros e falta debugar.
+
+- Fiz sozinho, com a ajuda das videos aulas que o professor colocou no youtube, pesquisas na internet. 
+
+- Estou apredendo as funcionalidades do repositório, aprendi a usar melhor as funções. 
+
+- Ainda com dificuldade em uso de repositório, por isso deixei mais pro final pra fazer essa atividade. Mas em constante evolução.
+
+- cerca de 7 horas.
 
 # Atividade 08 - Anotações
 
