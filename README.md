@@ -75,8 +75,6 @@
 
 # Atividade 06 - Repositorio I
 
-- (em andamento)
-
 - Fiz o resto das funcionalidades que faltava do código, mas ta dando erros e falta debugar.
 
 - Fiz sozinho, com a ajuda das videos aulas que o professor colocou no youtube, pesquisas na internet. 
