@@ -97,6 +97,18 @@
 
 - cerca de 10 horas.
 
+## [Atividade 09 - Salario](https://github.com/Cristianojr9/poo_2018.2/tree/master/Salario)
+
+- Fiz o programa que o professor pediu. 
+ 
+- Fiz sozinho, com base nos codigos do Trem e da Prova já que usa o polimorfismo entre classes, exemplo do funcionario.
+
+- Fixei melhor os conceitos de herança e polimorfismo e funcionamento entre as classes. 
+
+- Depois que fiz a prova e o twiiter foi com poucas dificuldades, deu pra fazer bem tranquilo 
+
+- Cerca de 9 horas.
+
 ## [Atividade 10 - Trem](https://github.com/Cristianojr9/poo_2018.2/tree/master/Trem)
 
 - Fiz quase todas as implementações que faltava do código do professor, desembarque, destrutores, função bool de existir, classe vargaoCarga. 
@@ -120,7 +132,8 @@
 - Estava com dificuldades sobre mapas, mas já acabou, e só uma dificuldade em polimorfismo, mas deu pra fazer tranquilo. 
 
 - umas 10 horas. Apenas a parte que faltava 
-## [Atividade 11 - Twitter](https://github.com/Cristianojr9/poo_2018.2/tree/master/Twitter)
+
+## [Atividade 12- Twitter](https://github.com/Cristianojr9/poo_2018.2/tree/master/Twitter)
 
 - Fiz o programa completo, mas com dificuldades na execução. 
 
