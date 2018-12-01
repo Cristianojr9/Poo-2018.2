@@ -115,6 +115,15 @@
 
 - Em andamento
 
+- Fiz o programa com o Entry e a parte sem o Entry, ambas favoritando e completa. 
+
+- Fiz pesquisando na internet sobre as associações de Entry e olhando outras atividades. 
+
+- Aprendi sobre Herança e sobre polimorfismo, estudei sobre ambas as coisas pra puder fazer essa atividade.
+
+- Estava com dificuldades sobre mapas, mas já acabou, e só uma dificuldade em polimorfismo, mas deu pra fazer tranquilo. 
+
+- umas 10 horas. Apenas a parte que faltava 
 # Atividade 11 - Twitter
 
 - Em andamento
