@@ -11,7 +11,7 @@ public:
     int id;
     string text;
     string username;
-    vector<string> v_usrlike;
+    vector<string> usrlike;
 
     Tweet(int id, string text = "", string username = ""):
         id(id), text(text), username(username)
@@ -23,17 +23,17 @@ public:
         return username;
     }
     void like(string username){
-        auto it = find(v_usrlike.begin(), v_usrlike.end(), username);
-        if(it == v_usrlike.end())
-            v_usrlike.push_back(username);
+        auto it = find(usrlike.begin(), usrlike.end(), username);
+        if(it == usrlike.end())
+            usrlike.push_back(username);
         else
-            v_usrlike.erase(it);
+            usrlike.erase(it);
     }  
     string toString(){
         stringstream ss;
         ss << to_string(id) + " " + username + ": " + text + " {";
-        for(auto it = v_usrlike.begin(); it != v_usrlike.end(); it++){
-            if(it != v_usrlike.end()-1) ss << *it + " ";
+        for(auto it = usrlike.begin(); it != usrlike.end(); it++){
+            if(it != usrlike.end()-1) ss << *it + " ";
             else ss << *it;
         }
         return ss.str() + "}";
@@ -41,10 +41,10 @@ public:
 };
 
 class User{
-    vector<Tweet*> v_timeline;
-    vector<Tweet*> v_myTweets;
-    vector<User*> v_seguidos;
-    vector<User*> v_seguidores;
+    vector<Tweet*> timeline;
+    vector<Tweet*> myTweets;
+    vector<User*> seguidos;
+    vector<User*> seguidores;
     int tt = 0; //tweets
 public: 
     string username;
@@ -56,29 +56,29 @@ public:
     ~User(){
     }
     void seguir(User * seguido){
-        this->v_seguidos.push_back(seguido);
-        seguido->v_seguidores.push_back(this);
+        this->seguidos.push_back(seguido);
+        seguido->seguidores.push_back(this);
     }
     string seguidos(){
         stringstream ss;
-        for(auto it = v_seguidos.begin(); it != v_seguidos.end(); it++){
-            if(it != v_seguidos.end()-1) ss << (*it)->username + " ";
+        for(auto it = seguidos.begin(); it != seguidos.end(); it++){
+            if(it != seguidos.end()-1) ss << (*it)->username + " ";
             else ss << (*it)->username;
         }
         return ss.str();
     }
     string seguidores(){
         stringstream ss;
-        for(auto it = v_seguidores.begin(); it != v_seguidores.end(); it++){
-            if(it != v_seguidores.end()-1) ss << (*it)->username + " ";
+        for(auto it = seguidores.begin(); it != seguidores.end(); it++){
+            if(it != seguidores.end()-1) ss << (*it)->username + " ";
             else ss << (*it)->username;
         }
         return ss.str();
     }
     void setTimeline(Tweet * twt){
-        this->v_myTweets.push_back(twt);
-        for(auto seguidor : v_seguidores){
-            seguidor->v_timeline.push_back(twt);
+        this->myTweets.push_back(twt);
+        for(auto seguidor : seguidores){
+            seguidor->timeline.push_back(twt);
             seguidor->tt++;
         }
     }
@@ -87,24 +87,24 @@ public:
         if(tt == 0)
             return "  nada de novo";
         for(int i = 1; i <= tt; i++){
-            ss << v_timeline[v_timeline.size()-i]->toString() + "\n";
+            ss << timeline[timeline.size()-i]->toString() + "\n";
         }
         this->tt = 0;
         return ss.str();
     }
     string myTweets(){
         stringstream ss;
-        if(v_myTweets.size() == 0)
+        if(myTweets.size() == 0)
             return "  publique algum tweet";
-        for(auto it = v_myTweets.end()-1; it >= v_myTweets.begin(); it--)
+        for(auto it = myTweets.end()-1; it >= myTweets.begin(); it--)
             ss << (*it)->toString() + "\n";
         return ss.str();
     }
     string timeline(){
         stringstream ss;
-        if(v_timeline.size() == 0)
+        if(timeline.size() == 0)
             return "  nao tem nada";
-        for(auto it = v_timeline.end()-1; it >= v_timeline.begin(); it--)
+        for(auto it = timeline.end()-1; it >= timeline.begin(); it--)
             ss << (*it)->toString() + "\n";
         this->tt = 0;
         return ss.str();
