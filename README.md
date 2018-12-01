@@ -113,8 +113,6 @@
 
 # Atividade - Prova
 
-- Em andamento
-
 - Fiz o programa com o Entry e a parte sem o Entry, ambas favoritando e completa. 
 
 - Fiz pesquisando na internet sobre as associações de Entry e olhando outras atividades. 
@@ -126,4 +124,12 @@
 - umas 10 horas. Apenas a parte que faltava 
 # Atividade 11 - Twitter
 
-- Em andamento
+- Fiz o programa completo, mas com dificuldades na execução. 
+
+- Fiz olhando os outros códigos e pesquisando na internet.
+
+- Aprendi a usar melhor o repository e usar os ponteiros e maneira certa.
+
+- Estava com dificuldades na execução do twitter, já tava saindo o codigo, mas depois de umas pesquisas a coisas andou e deu certo. 
+
+- cerca de umas 12 horas. 
