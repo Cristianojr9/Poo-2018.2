@@ -135,11 +135,11 @@
 
 ## [Atividade 12- Twitter](https://github.com/Cristianojr9/poo_2018.2/tree/master/Twitter)
 
-- Fiz o programa completo, mas com dificuldades na execução. 
+- Fiz o programa completo, com dificuldades na execução, mas funcionando.
 
 - Fiz olhando os outros códigos e pesquisando na internet.
 
-- Aprendi a usar melhor o repository e usar os ponteiros e maneira certa.
+- Aprendi a usar melhor o repository e usar os ponteiros e maneira certa. Tambem aprendi muito mais sobre herança já que fiz os três codigos que estavam faltando em sequencia e fixei muito bem o conteudo. 
 
 - Estava com dificuldades na execução do twitter, já tava saindo o codigo, mas depois de umas pesquisas a coisas andou e deu certo. 
 
