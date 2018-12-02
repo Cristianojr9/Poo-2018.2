@@ -20,8 +20,9 @@ class Note : public Entry {
     vector<string> itens;
  public:
 
-    Note(string id = ""){
-        this->id = id;
+    Note(string id = ""):
+        id(id)
+    {
     }
     string getId(){
         return id;
@@ -88,8 +89,9 @@ public:
         return favorited;
     }
 
-    Contato(string name = ""){
-        this->name = name;
+    Contato(string name = ""):
+        name(name)
+    {
     }
 
     string getId(){
@@ -98,7 +100,7 @@ public:
 
     void addFone(Fone fone){
         if(!Fone::validate(fone.number))
-            throw string("fone " + fone.number + " invalido");
+            throw string("numero " + fone.number + " invalido");
         fones.push_back(fone);
     }
 
@@ -131,11 +133,10 @@ public:
 };
 
 
-class Agenda {
+class Agenda{
 public:
-   map<string, Entry*> m_entries;
-   map<string, Entry*> m_favorities;
-
+    map<string, Entry*> m_entries;
+    map<string, Entry*> m_favorities;
 
     void addEntry(Entry * entry){
         m_entries.insert(make_pair(entry->getId(), entry));
@@ -149,18 +150,18 @@ public:
         if(it != m_entries.end()){
             m_entries.at(idEntry)->setFavorited(true);
             m_favorities.insert(make_pair(idEntry, m_entries.at(idEntry)));
-        }else{
-            throw "fail: erro";
         }
+        else
+            throw "fail: contato nao favoritad o";
     }
     void unfavorite(string idEntry){
         auto it =  m_entries.find(idEntry);
         if(it != m_entries.end()){
             m_entries.at(idEntry)->setFavorited(false);
             m_favorities.erase(idEntry);
-        }else{
-            throw "fail: erro";
         }
+        else
+            throw "fail: contato nao desfavoritado";
     }
     vector<Entry*> getFavorited(){
         vector<Entry*> favoritos;
@@ -173,9 +174,9 @@ public:
         auto it =  m_entries.find(id);
         if(it != m_entries.end()){
             return m_entries.at(id);
-        }else{
-            throw "fail: errouuu";
         }
+        else
+            throw "fail: errouuu";
     }
     vector<Entry*> getEntries(){
         vector<Entry*> entradas;
@@ -188,7 +189,7 @@ public:
     string toString(){
         stringstream ss;
         for(auto it : m_entries){
-            ss << it.second->toString()<<endl;
+            ss << it.second->toString() << endl;
         }
         return ss.str();
     }
@@ -208,11 +209,8 @@ public:
         }
         return nullptr;
     }
-
-
 };
 class Controller {
-
     AgendaMaster agenda;
 public:
 
@@ -281,9 +279,9 @@ public:
             string name;
             ss >> name;
             agenda.rmEntry(name);
-        }else if(op == "agenda"){
+        }else if(op == "show"){
             cout << agenda.toString();
-        }else if(op == "search"){
+        }else if(op == "Proucurar"){
             string pattern;
             ss >> pattern;
             auto it = agenda.getEntry(pattern);
@@ -292,7 +290,7 @@ public:
             string name;
             ss >> name;
             agenda.favorite(name);
-        }else if(op == "desfav"){
+        }else if(op == "desfavoritar"){
             string name;
             ss >> name;
             agenda.unfavorite(name);
@@ -304,11 +302,11 @@ public:
             cout << "comando invalido" << endl;
     }
 
-
     void exec() {
         string line = "";
         while(true){
             getline(cin, line);
+            cout << "$" << line << endl;
             if(line == "end")
                 return;
             try {
@@ -321,7 +319,7 @@ public:
 };
 
 int main(){
-    Controller controller;
-    controller.exec();
+    Controller c;
+    c.exec();
     return 0;
 }
