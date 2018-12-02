@@ -7,106 +7,104 @@
 using namespace std;
 
 class Tweet{
-public: 
     int id;
-    string text;
-    string username;
-    vector<string> usrlike;
-
-    Tweet(int id, string text = "", string username = ""):
-        id(id), text(text), username(username)
-    {
-    }
-    ~Tweet(){
-    }
+    string username, text;
+    vector<string> v_usrlike;
+public:
+    Tweet(int id = 0, string username = "", string text = ""): 
+		id(id), username(username), text(text)
+	{
+	}
+    ~Tweet(){}
     string getUsername(){
         return username;
     }
     void like(string username){
-        auto it = find(usrlike.begin(), usrlike.end(), username);
-        if(it == usrlike.end())
-            usrlike.push_back(username);
+        auto it = find(v_usrlike.begin(), v_usrlike.end(), username);
+        if(it == v_usrlike.end())
+            v_usrlike.push_back(username);
         else
-            usrlike.erase(it);
-    }  
+            v_usrlike.erase(it);
+    }    
     string toString(){
         stringstream ss;
         ss << to_string(id) + " " + username + ": " + text + " {";
-        for(auto it = usrlike.begin(); it != usrlike.end(); it++){
-            if(it != usrlike.end()-1) ss << *it + " ";
-            else ss << *it;
+        for(auto it = v_usrlike.begin(); it != v_usrlike.end(); it++){
+            if(it != v_usrlike.end()-1) {
+				ss << *it + " ";	
+			}else{
+				ss << *it;	
+			}
         }
         return ss.str() + "}";
     }
 };
 
 class User{
-    vector<Tweet*> timeline;
-    vector<Tweet*> myTweets;
-    vector<User*> seguidos;
-    vector<User*> seguidores;
-    int tt = 0; //tweets
-public: 
     string username;
-    
+    int queue = 0;
+    vector<Tweet*> v_timeline;
+    vector<Tweet*> v_myTweets;
+    vector<User*> v_seguidos;
+    vector<User*> v_seguidores;
+public:
     User(string username = ""):
         username(username)
-    {
-    }
-    ~User(){
-    }
+	{
+	}
+    ~User(){}
     void seguir(User * seguido){
-        this->seguidos.push_back(seguido);
-        seguido->seguidores.push_back(this);
+        this->v_seguidos.push_back(seguido);
+        seguido->v_seguidores.push_back(this);
     }
     string seguidos(){
         stringstream ss;
-        for(auto it = seguidos.begin(); it != seguidos.end(); it++){
-            if(it != seguidos.end()-1) ss << (*it)->username + " ";
+        for(auto it = v_seguidos.begin(); it != v_seguidos.end(); it++){
+            if(it != v_seguidos.end()-1) ss << (*it)->username + " ";
             else ss << (*it)->username;
         }
         return ss.str();
     }
     string seguidores(){
         stringstream ss;
-        for(auto it = seguidores.begin(); it != seguidores.end(); it++){
-            if(it != seguidores.end()-1) ss << (*it)->username + " ";
+        for(auto it = v_seguidores.begin(); it != v_seguidores.end(); it++){
+            if(it != v_seguidores.end()-1) ss << (*it)->username + " ";
             else ss << (*it)->username;
         }
         return ss.str();
     }
     void setTimeline(Tweet * twt){
-        this->myTweets.push_back(twt);
-        for(auto seguidor : seguidores){
-            seguidor->timeline.push_back(twt);
-            seguidor->tt++;
+        this->v_myTweets.push_back(twt);
+        for(auto seguidor : v_seguidores){
+            seguidor->v_timeline.push_back(twt);
+            seguidor->queue++;
         }
     }
     string unread(){
         stringstream ss;
-        if(tt == 0)
-            return "  nada de novo";
-        for(int i = 1; i <= tt; i++){
-            ss << timeline[timeline.size()-i]->toString() + "\n";
+        if(queue == 0)
+            throw "  nao tem tweets novos\n";
+        for(int i = 1; i <= queue; i++){
+            ss << v_timeline[v_timeline.size()-i]->toString() + "\n";
         }
-        this->tt = 0;
+        this->queue = 0;
         return ss.str();
     }
     string myTweets(){
         stringstream ss;
-        if(myTweets.size() == 0)
-            return "  publique algum tweet";
-        for(auto it = myTweets.end()-1; it >= myTweets.begin(); it--)
+        if(v_myTweets.size() == 0)
+            throw " voce nao publicou nada\n";
+        for(auto it = v_myTweets.end()-1; it >= v_myTweets.begin(); it--)
             ss << (*it)->toString() + "\n";
         return ss.str();
     }
     string timeline(){
         stringstream ss;
-        if(timeline.size() == 0)
-            return "  nao tem nada";
-        for(auto it = timeline.end()-1; it >= timeline.begin(); it--)
+        if(v_timeline.size() == 0)
+            throw "  nao tem tweets \n";
+        for(auto it = v_timeline.end()-1; it >= v_timeline.begin(); it--)
             ss << (*it)->toString() + "\n";
-        this->tt = 0;
+        this->queue = 0;
         return ss.str();
     }
     string toString(){
@@ -204,11 +202,11 @@ public:
                 r_user->getT(seguidor)->seguir(r_user->getT(seguido));
             }
             else if(op == "twittar"){
-                string username, text;
+                string username, texto;
                 in >> username;
-                getline(in, text);
-                auto twt = g_tweet->createtwt(username, text);
-                r_user->getT(username)->setTimeline(twt);
+                getline(in, texto);
+                auto tt = g_tweet->createtwt(username, texto);
+                r_user->getT(username)->setTimeline(tt);
             }
             else if(op == "seguidores"){
                 string user;
@@ -243,9 +241,9 @@ public:
             else
                 cout << "comando invalido" << endl;
         }
-        catch(string e){ out << "  fail: " + e; }
-	    catch(char const* e){ out << "  fail: " << e; }
-	    catch(...){ out << "  fail: ocorreu uma excecao"; }
+        catch(string e){ 
+			out << "  fail: " + e; 
+		}
 	    return out.str();
 	} 
     void exec() {
@@ -266,6 +264,6 @@ public:
 
 int main(){
     Controller c;
-    c.exec;
+    c.exec();
     return 0;
 }
