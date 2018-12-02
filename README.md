@@ -135,7 +135,7 @@
 
 ## [Atividade - Prova](https://github.com/Cristianojr9/poo_2018.2/tree/master/Prova)
 
-- Fiz o programa com o Entry e a parte sem o Entry, ambas favoritando e completa. 
+- Fiz o programa com o Entry e a parte sem o Entry. 
 
 - Fiz pesquisando na internet sobre as associações de Entry e olhando outras atividades. 
 
