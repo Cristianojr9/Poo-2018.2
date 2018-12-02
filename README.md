@@ -85,6 +85,18 @@
 
 - cerca de 7 horas.
 
+## [Atividade 07 - Agiota + Repositorio](https://github.com/Cristianojr9/poo_2018.2/tree/master/Agiota%20com%20repositorio)
+
+- Apenas implementei o repositorio no meu codigo do agiota já feito
+
+- Fiz sozinho, foi bem chatinho, mas foi mais facil porque já estava trabalhando com repositorio nos outros codigos.
+
+- Fixei muito bem o conteudo de repositorio e classes. 
+
+- Só estava com dificuldade na questão de usar o repositorio pro agiota, mas depois de umas estudadas deu certo.
+
+- cerca de 5 horas.
+
 ## [Atividade 08 - Anotações](https://github.com/Cristianojr9/poo_2018.2/tree/master/Anota-es)
 
 - Fiz o programa, mas imcompleto (sem apagar uma nota dado o título), mas com todas as outras funções.
@@ -139,7 +151,7 @@
 
 - Fiz olhando os outros códigos e pesquisando na internet.
 
-- Aprendi a usar melhor o repository e usar os ponteiros e maneira certa. Tambem aprendi muito mais sobre herança já que fiz os três codigos que estavam faltando em sequencia e fixei muito bem o conteudo. 
+- Aprendi muito mais sobre herança já que fiz os três codigos que estavam faltando em sequencia e fixei muito bem o conteudo. 
 
 - Estava com dificuldades na execução do twitter, já tava saindo o codigo, mas depois de umas pesquisas a coisas andou e deu certo. 
 
